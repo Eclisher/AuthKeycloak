@@ -1,0 +1,39 @@
+curl --location 'https://preprod.sso.eqima.org/realms/stripe/protocol/openid-connect/token' \
+--header 'Content-Type: application/x-www-form-urlencoded' \
+--data-urlencode 'client_id=stripe-client' \
+--data-urlencode 'username=stripe' \
+--data-urlencode 'password=****' \
+--data-urlencode 'grant_type=password' \
+--data-urlencode 'client_secret=********'
+
+curl --location 'http://localhost:8080/realms/master/protocol/openid-connect/token' \
+--header 'Content-Type: application/x-www-form-urlencoded' \
+--data-urlencode 'client_id=reactClient' \
+--data-urlencode 'username=master' \
+--data-urlencode 'password=5f971cyo71dfchK' \
+--data-urlencode 'grant_type=password' \
+--data-urlencode 'client_secret=TXL6U4Hx7WLfGgru2PW5aV70JmEt38u8'
+
+curl --location 'http://localhost:8080/realms/master/protocol/openid-connect/token' \
+--header 'Content-Type: application/x-www-form-urlencoded' \
+--data-urlencode 'client_id=admin-cli' \
+--data-urlencode 'username=admin' \
+--data-urlencode 'password=admin' \
+--data-urlencode 'grant_type=password' \
+--data-urlencode 'client_secret=TXL6U4Hx7WLfGgru2PW5aV70JmEt38u8'
+
+
+GET USER ID
+curl --location 'http://localhost:8080/admin/realms/master/users?username=koto' \
+--header 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJhd3A4UnMzUkwwVW9sc01Hd3VMWnJockdrb3ZzczY4Nlc3YmxYUFdlU1NnIn0.eyJleHAiOjE3NzM3NDc1NTIsImlhdCI6MTc3Mzc0NzQ5MiwianRpIjoidHJsdGNjOjNlOWFjNDQzLTA3OTctMWI2Mi01Njg1LThjMTk0ODc4NTNiNyIsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC9yZWFsbXMvbWFzdGVyIiwic3ViIjoiYWI5ZTAzNWEtMDRmNS00NzNhLThjYTgtNDQ2ZmZiODNjMDlhIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiYWRtaW4tY2xpIiwic2NvcGUiOiJwcm9maWxlIGVtYWlsIn0.WETDEL3L4nBe6Lw8MGaqGqHjFDvSMagjfQrERylKtKVKRr73v_6x6Cfdhi844U02I7Sj6X6OsWN6BOnM1oPGUp6L9dh86fAJ0Y-J-RrOHdIXX12R7xCcSWuxKtCBngFp2glyJFY0rQ9BEAW5KMT8Y84EwaZMf6FkFScZlJThQ3oye7-DMRGpIqyzbj4HugvvH-VEqJO_hoIFzlMg2AldjF-7mjYxa2FP2N-IM20R8NyE5S5ahhEPLo134CLPCVTTUILBVF_G_KtPXPwRrUlKB5S3RDmfZZIM_pqRfjL-4cdLXMIkrNHXQxYfTUuwuYuhWLo5AplMLl3ij-php0TuEA'
+
+curl --location 'http://localhost:8080/admin/realms/master/users/a09c18fa-2eed-460a-82b3-f48c1f04babb/role-mappings/realm' \
+--header 'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJhd3A4UnMzUkwwVW9sc01Hd3VMWnJockdrb3ZzczY4Nlc3YmxYUFdlU1NnIn0.eyJleHAiOjE3NzM3NDc2MzEsImlhdCI6MTc3Mzc0NzU3MSwianRpIjoidHJsdGNjOjA3MDFlMmU3LWU2NzgtNmNiMS1jY2QwLTgxOGI3Y2YzZDdlNSIsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC9yZWFsbXMvbWFzdGVyIiwic3ViIjoiYWI5ZTAzNWEtMDRmNS00NzNhLThjYTgtNDQ2ZmZiODNjMDlhIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiYWRtaW4tY2xpIiwic2NvcGUiOiJwcm9maWxlIGVtYWlsIn0.Clv26m9pPOy9dYUBpCTlognqp2zZIBnTP9-nzKugKq4imTNImv5MxaV7YFkrywZacZEurauKITpFGg_zPsWW-yXhxtjANOixpmIkBX16YxIOtsA0qWn-nLZCekONZwc8gvI4oLNH-jEkfTXT8hqZKhNh2Qq1zryVyNIMwiV9I6atc5GtkmbRsjOqhGeZxuuYzSlAViFSMWdK9l7QhzXZXngTTUq7V9OlFvPiZrhReQQrk3w-TcSMKwrSC-Ff9wWyLzDr0ow3DkadDxGXr6bWQwt-Nq_ckWO6fC_9YRo7ZU6bkjhf7w-CKjOEsTElWGu1pIXN6Q_8_VJcg-rfhcIbCg'
+
+curl --location 'http://localhost:8080/realms/master/protocol/openid-connect/token' \
+--header 'Content-Type: application/x-www-form-urlencoded' \
+--data-urlencode 'client_id=admin-cli' \
+--data-urlencode 'client_secret=m8cYQm35KpAmJezNoYq7BonCrztXEooS' \
+--data-urlencode 'grant_type=client_credentials'
+
+{"access_token":"eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJhd3A4UnMzUkwwVW9sc01Hd3VMWnJockdrb3ZzczY4Nlc3YmxYUFdlU1NnIn0.eyJleHAiOjE3NzM3NDc0ODQsImlhdCI6MTc3Mzc0NzQyNCwianRpIjoidHJsdGNjOjg1NzJiZGQyLTE3MWMtNmM2OC01NTM1LWExYjg2MGM5ODk2OCIsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC9yZWFsbXMvbWFzdGVyIiwic3ViIjoiYWI5ZTAzNWEtMDRmNS00NzNhLThjYTgtNDQ2ZmZiODNjMDlhIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoiYWRtaW4tY2xpIiwic2NvcGUiOiJwcm9maWxlIGVtYWlsIn0.kJks-9pM9ayYdL5CgVfcDtZrewOlPFSNjbVnjs0YbddNMdqD25vsmvMA25X5WJvNL3by4PRaEyoBgUQ98pNRCgWDlSqUF5X0WJpMbbvyZzJHfbbrvgy-MXuCZrhOivIxsgqsr0e5VGmLx-U5pToUNka4MScPKoxZXTRJ2P4jggkF7dYyzBW9c1cBjwGdlGvccuQjlgwk1XzE-2cQFtIUrhqDaJIP04Obp3YT2Z26U02sd_VJjke2v88aibfPYygchLfWVscaQC2xGKIg7bfjl17FP89W8HiC15Dyl7Ba6Iy7RmkCaK0_3roWuabvhBQpMVdoPfuvH3AgC5wAXFRB9A","expires_in":60,"refresh_expires_in":0,"token_type":"Bearer","not-before-policy":0,"scope":"profile email"}%      
